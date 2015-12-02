@@ -9,6 +9,33 @@ end
 #
 # Your code here
 
+def fizzbuzz(n)
+	if n % 3 == 0 && n % 5 == 0
+		return "FizzBuzz"
+	elsif n % 3 == 0
+		return "Fizz"
+	elsif n % 5 == 0
+		return "Buzz"
+	else return number
+	end
+end
+
+=begin
+
+# A DRY-er implementation
+
+def fizzbuzz(n)
+	if n % 3 == 0 && n % 5 == 0
+		return "FizzBuzz"
+	elsif n % 3 == 0
+		return "Fizz"
+	elsif n % 5 == 0
+		return "Buzz"
+	else return number
+	end
+end
+
+=end
 
 # Tests
 assert_equal fizzbuzz(1), 1
@@ -19,6 +46,6 @@ assert_equal fizzbuzz(15), "FizzBuzz"
 assert_equal fizzbuzz(5175), "FizzBuzz"
 
 # uncomment this code when your tests pass
-#1.upto(100) do |number|
-#  puts fizzbuzz(number)
-#end
+1.upto(100) do |number|
+	puts fizzbuzz(number)
+end

@@ -9,18 +9,28 @@
 require 'pry'
 
 def contacts_count(contacts)
+	contacts.length
 end
 
 #create a contact using the hash syntax
 def create_contact(name, telephone, email)
+	{name: name, telephone: telephone, email: email}
 end
 
 #iterate through all contacts. Print THE name, email & telephone using iterpolation "#{this_syntax_is} interpolation" 
 def contact_log(contacts)
+	contacts.each do |each|
+
+	end
 end
 
 #find a specific contact and print the telephone number
 def find_and_call_contact(contacts, name)
+	contacts.each do |each|
+		if contacts[:name] == name
+			puts "Calling #{:name} at #{:telephone}"
+		end
+	end
 end
 
 def add_to_contacts(contacts, contact)
