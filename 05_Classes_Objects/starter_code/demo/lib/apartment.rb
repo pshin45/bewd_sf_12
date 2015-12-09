@@ -17,7 +17,6 @@ class Apartment
 	def is_occupied?()
 		@renters != []
 	end
-
 	def rent_out(price, tenant)
 		@rent = price
 		add_renter(tenant) # Okay to call method even though it's defined later, because that's how Ruby works, checks all defined methods first before any are run

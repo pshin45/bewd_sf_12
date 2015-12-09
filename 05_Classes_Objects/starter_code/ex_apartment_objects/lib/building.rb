@@ -1,7 +1,6 @@
 #Building Class
 class Building
 	attr_accessor :name, :address, :num_apartments, :apartments
-
 	def initialize(name, address, apartments)
 		@name = name
 		@address = address
@@ -15,3 +14,4 @@ class Building
 		end
 	end
 end
+

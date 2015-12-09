@@ -3,12 +3,20 @@
  
 #Jimmy Mazin, math major, grade F
 #Pepe Hogue, music major, grade B
+# jimmy = {name: "Jimmy Mazin", major: "Math", grade: "F"}
+# pepe = {name: "Pepe Hogue", major: "Music", grade: "B"}
 
 jimmy = {name: "Jimmy Mazin", major: "Math", grade: "F"}
 pepe = {name: "Pepe Hogue", major: "Music", grade: "B"}
 
-#And a totally unrelated hash about eggs
-#eggs, brand "Golden Fields", price, grade A
+# #grade_status: A method that is supposed to decide which students fail and which pass a class
+# def grade_status(student)
+# 	if student[:grade] == "F"
+# 		"failed"
+# 	else
+# 		"passed"
+# 	end
+# end
 
 eggs = {brand: "Golden Fields", num: 12, price: 3, grade: "A"}
 
@@ -100,6 +108,27 @@ puts "Egg's status: #{eggs.grade_status()}"
 #####################################################################################################
 #####################################################################################################
 #Add initialize method to Student class
+class Student 
+	attr_accessor :name, :major, :grade
+
+	def initialize (name, major)
+		@name = name
+		@major = major
+		@grade = ""
+	end
+
+	def grade_status()
+		if @grade == "F"
+			"failed"
+		else
+			"passed"
+		end
+	end
+
+end
+
+jimmy = Student.new("Jimmy", "math")
+
 
 #create Jimmy and Pepe again
 
