@@ -1,3 +1,4 @@
+require 'pry'
 require_relative 'lib/building'
 require_relative 'lib/apartment'
 require_relative 'lib/person'
@@ -32,7 +33,8 @@ building.display_apartments()
 # => nil
 
 #create a renter with name, a budget, and a credit score
-steve = new Person("Steve", 1000, 650)
+steve = Person.new("Steve", 1000, 650)
+jack = Person.new("Jack", 5000, 850)
 
 puts "Now Steve wants to rent an apartment."
 
@@ -53,6 +55,7 @@ a1.apply_renter?(steve)
 
 puts "Wonderful! Now Steve rents the apartment."
 a1.add_renter(steve)
+a1.add_renter(jack)
 
 a1.show_renters()
 # "Unit A1 has these renters: [Steve]"

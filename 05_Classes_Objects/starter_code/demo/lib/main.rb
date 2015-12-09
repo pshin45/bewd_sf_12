@@ -3,7 +3,7 @@
 #Read this file and figure out what properties and methods the Apartment class needs to have!
 
 #This part is important, it's how this file has access to the definition of the Apartment class:
-require_relative 'lib/apartment' # Indicates that I should create an apartment.rb file inside lib directory
+require_relative 'lib/apartment'
 
 #create a new Apartment 
 # unit = "1A", sqft = 600, num_bedrooms = 1, num_bathrooms = 1
@@ -19,7 +19,7 @@ puts "The current rent is: #{a1.rent}"
 puts "The current renters are: #{a1.renters}"
 # => "The current renters are: []"
 
-puts "Is the unit occupied? #{a1.is_occupied?()}"
+puts "Is the unit occupied?"
 a1.is_occupied?
 # => false
 
