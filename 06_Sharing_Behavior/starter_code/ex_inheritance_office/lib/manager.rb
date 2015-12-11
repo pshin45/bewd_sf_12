@@ -8,7 +8,20 @@ class Manager < Employee
 	#make sure a Manager's full name includes their title
 
 	#managers like to be contacted via email
-	def contact()
+	attr_accessor :title, :email
 
+	def initialize (first_name, last_name, title, email)
+		super(first_name, last_name)
+		@title = title
+		@email = email
+	end
+
+	def full_name()
+	   #return a string
+	   "#{@title} " + super()
+	end
+
+	def contact()
+		"#{@email}"
 	end
 end

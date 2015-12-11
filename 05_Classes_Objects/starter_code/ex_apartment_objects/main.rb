@@ -1,14 +1,11 @@
-require 'pry'
-
+require "pry"
 require_relative 'lib/building'
 require_relative 'lib/apartment'
 require_relative 'lib/person'
 =begin
 Read this file and use it to understand how to fill in each class file
 (Apartment, Building and Person) in the lib folder
-
 This file has examples of methods and properties that each class should have.
-
 When a method is called, below you will see a commented out version of 
 what it should print out and return
 =end
@@ -35,8 +32,6 @@ building.display_apartments()
 
 #create a renter with name, a budget, and a credit score
 steve = Person.new("Steve", 1000, 650)
-jack = Person.new("Jack", 5000, 850)
-
 
 puts "Now Steve wants to rent an apartment."
 
@@ -57,7 +52,6 @@ a1.apply_renter?(steve)
 
 puts "Wonderful! Now Steve rents the apartment."
 a1.add_renter(steve)
-a1.add_renter(jack)
 
 a1.show_renters()
 # "Unit A1 has these renters: [Steve]"
@@ -69,7 +63,3 @@ building.display_apartments()
 # "Unit 1B has 1400 sqft, 2 bed, 1 bath, it's available!"
 # "Unit 2A has 2000 sqft, 3 bed, 2 bath, it's available!"
 # => nil
-
-
-
-

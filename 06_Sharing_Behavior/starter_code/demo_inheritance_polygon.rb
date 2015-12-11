@@ -1,3 +1,4 @@
+require 'pry'
 
 class Polygon
 	attr_accessor :len_sides
@@ -7,12 +8,12 @@ class Polygon
 	end
 
 	def num_sides()
-		@len_sides.length
+		@len_sides.length # .length is an instance method, Array.length would be a class method
 	end
 
 	def is_regular()
 		#check if all sides are the same length
-		return @len_sides.uniq().empty?
+		@len_sides.uniq().length == 1 # .uniq() removes duplicates
 	end
 
 	def to_s()
@@ -21,28 +22,27 @@ class Polygon
 end
 
 
-class Rectangle < Polygon
-
+class Rectangle < Polygon # This notation tells us that Rectangle class inherits from Polygon class
 	attr_accessor :length, :width
 
-	def initialize(length, width)
+	def initialize(length, width) # Overriding the parent class
 		@length = length
 		@width = width
-		super([length, width, length, width])
+		super([length, width, length, width]) # Could also be written as "@len_sides = [length, width, length, width]"
 	end
 
-	def area ()
-		return @length * @width
+	def area()
+		@length * @width
 	end
 
-	def to_s ()
-		super() + " It's length and width are #{@length}, #{@width}."
+	def to_s()
+		super() + " I have area #{self.area()}" # self here is optional
 	end
 end
 
 
 class Square < Rectangle
-	def initialize(side)
-		super(side, side)
-	end
+
 end
+
+binding.pry

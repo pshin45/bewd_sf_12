@@ -12,12 +12,23 @@ class Employee
 	#Remember to create getter method for the class variable
 	#name it get_num_employees
 
+	attr_accessor :first_name, :last_name
+	@@num_employees = 0
+
+
 	def initialize (first_name, last_name)
-		
+		@first_name = first_name
+		@last_name = last_name
+		@@num_employees += 1
+	end
+
+	def self.num_employees
+		@@num_employees	
 	end
 
 	def full_name()
 	   #return a string
+	   "#{@first_name} #{@last_name}"
 	end
 
 	def contact()
