@@ -1,0 +1,63 @@
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 21:00:59 -0800
+Processing by GameController#index as HTML
+  Rendered game/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 1256ms (Views: 1244.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2015-12-15 21:01:01 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-15 21:01:01 -0800
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2015-12-15 21:01:01 -0800
+
+
+Started GET "/assets/secret_number.css?body=1" for 127.0.0.1 at 2015-12-15 21:01:01 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-12-15 21:01:01 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-12-15 21:01:01 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-12-15 21:01:01 -0800
+
+
+Started GET "/assets/secret_number.js?body=1" for 127.0.0.1 at 2015-12-15 21:01:01 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-15 21:01:01 -0800
+
+
+Started GET "/secret_number/new" for 127.0.0.1 at 2015-12-15 21:02:51 -0800
+Processing by SecretNumberController#new as HTML
+  Rendered secret_number/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/game.css?body=1" for 127.0.0.1 at 2015-12-15 21:02:51 -0800
+
+
+Started GET "/assets/secret_number.css?body=1" for 127.0.0.1 at 2015-12-15 21:02:51 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-12-15 21:02:51 -0800
+
+
+Started GET "/assets/secret_number.js?body=1" for 127.0.0.1 at 2015-12-15 21:02:51 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-12-15 21:02:51 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-12-15 21:02:51 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-12-15 21:02:51 -0800
+
+
+Started GET "/assets/game.js?body=1" for 127.0.0.1 at 2015-12-15 21:02:51 -0800
