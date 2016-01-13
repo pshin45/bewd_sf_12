@@ -2,7 +2,7 @@ class MoviesController < ApplicationController
   before_action :load_movie, only: [:update, :edit, :show]
 
   def index
-    @movies = Movie.all()
+    @movies = Movie.search_for(params[:q])
   end
 
   def new
@@ -22,7 +22,14 @@ class MoviesController < ApplicationController
   end
 
   def update
-    
+    @movie.update(safe_movie_params)
+    redirect_to @movie
+  end
+
+  def destroy
+    @movie = Movie.find(params[:id])
+    @movie.destroy
+    redirect_to movies_path
   end
 
   def show

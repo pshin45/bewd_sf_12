@@ -7,5 +7,6 @@ class Movie < ActiveRecord::Base
   def self.search_for(query)  
   	#example SQL query: "title like '%Fear and Loathing%'" 
   	#use the built-in ActiveRecord function "where", check out the shirts app for an example
+  	Movie.where('title LIKE :query OR description LIKE :query OR year_released LIKE :query', query: "%#{query}%")
   end    
 end
