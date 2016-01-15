@@ -1,0 +1,854 @@
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-12 18:37:26 -0800
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  activerecord (4.0.0) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.0) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__663119826102099171__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/petershin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/petershin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/petershin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/petershin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/petershin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/petershin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/petershin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (47.5ms)
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateStories (20130622215231)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "stories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "link" varchar(255), "upvotes" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130622215231"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-12 18:37:43 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.1ms)[0m  SELECT "stories".* FROM "stories"
+  Rendered collection (0.0ms)
+  Rendered stories/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 1347ms (Views: 1333.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-01-12 18:37:45 -0800
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2016-01-12 18:37:45 -0800
+
+
+Started GET "/assets/stories.css?body=1" for 127.0.0.1 at 2016-01-12 18:37:45 -0800
+
+
+Started GET "/assets/stories.js?body=1" for 127.0.0.1 at 2016-01-12 18:37:45 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-01-12 18:37:45 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-12 18:37:45 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-12 18:37:45 -0800
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2016-01-12 18:37:45 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-01-12 18:37:45 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-12 18:37:45 -0800
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2016-01-12 18:37:45 -0800
+
+
+Started GET "/assets/stories.js?body=1" for 127.0.0.1 at 2016-01-12 18:37:45 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-01-12 18:37:45 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComments (20160113025007)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mStory Load (1.5ms)[0m  [1mSELECT "stories".* FROM "stories"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComments (20160113025007)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComments (20160113025007)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComments (20160113025007)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "story_id" integer, "post" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.2ms)[0m  CREATE INDEX "index_comments_on_story_id" ON "comments" ("story_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160113025007"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Migrating to CreateCategories (20160113025059)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "categories_stories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "category_id" integer, "story_id" integer) [0m
+  [1m[35m (0.2ms)[0m  CREATE INDEX "index_categories_stories_on_category_id" ON "categories_stories" ("category_id")
+  [1m[36m (0.2ms)[0m  [1mCREATE INDEX "index_categories_stories_on_story_id" ON "categories_stories" ("story_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160113025059"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (7.9ms)[0m  [1mINSERT INTO "stories" ("created_at", "link", "title", "updated_at", "upvotes") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 13 Jan 2016 03:19:47 UTC +00:00], ["link", "http://qz.com/85400/moving-to-open-plan-offices-makes-employees-less-productive-less-happy-and-more-likely-to-get-sick/#"], ["title", "Open-plan offices make employees less productive, less happy, and more sick"], ["updated_at", Wed, 13 Jan 2016 03:19:47 UTC +00:00], ["upvotes", 1]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "stories" ("created_at", "link", "title", "updated_at", "upvotes") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 13 Jan 2016 03:19:47 UTC +00:00], ["link", "http://yinwang0.wordpress.com/2012/01/03/ydiff/"], ["title", "ydiff: Structural Comparison of Programs"], ["updated_at", Wed, 13 Jan 2016 03:19:47 UTC +00:00], ["upvotes", 1]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "stories" ("created_at", "link", "title", "updated_at", "upvotes") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 13 Jan 2016 03:19:47 UTC +00:00], ["link", "http://www.motherjones.com/politics/2013/05/ak-47-semi-automatic-rifle-building-party"], ["title", "I Built This AK-47. It's Legal and Totally Untraceable."], ["updated_at", Wed, 13 Jan 2016 03:19:47 UTC +00:00], ["upvotes", 1]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES (?, ?, ?)  [["created_at", Wed, 13 Jan 2016 03:19:47 UTC +00:00], ["title", "Productivity"], ["updated_at", Wed, 13 Jan 2016 03:19:47 UTC +00:00]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Wed, 13 Jan 2016 03:19:47 UTC +00:00], ["title", "Politics"], ["updated_at", Wed, 13 Jan 2016 03:19:47 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES (?, ?, ?)  [["created_at", Wed, 13 Jan 2016 03:19:47 UTC +00:00], ["title", "Office"], ["updated_at", Wed, 13 Jan 2016 03:19:47 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("created_at", "title", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Wed, 13 Jan 2016 03:19:47 UTC +00:00], ["title", "Business"], ["updated_at", Wed, 13 Jan 2016 03:19:47 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("created_at", "title", "updated_at") VALUES (?, ?, ?)  [["created_at", Wed, 13 Jan 2016 03:19:47 UTC +00:00], ["title", "Dev"], ["updated_at", Wed, 13 Jan 2016 03:19:47 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mCategory Load (0.5ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?  [["story_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  INSERT INTO "categories_stories" ("story_id", "category_id") VALUES (1, 1)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "categories_stories" ("story_id", "category_id") VALUES (1, 4)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "categories_stories" ("story_id", "category_id") VALUES (1, 3)
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?  [["story_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "categories_stories" ("story_id", "category_id") VALUES (2, 2)
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?  [["story_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "categories_stories" ("story_id", "category_id") VALUES (3, 1)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "categories_stories" ("story_id", "category_id") VALUES (3, 5)[0m
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mStory Load (2.8ms)[0m  [1mSELECT "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCategory Load (0.8ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?  [["story_id", 1]]
+  [1m[36m (4.7ms)[0m  [1mSELECT COUNT(*) FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?[0m  [["story_id", 1]]
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories" INNER JOIN "categories_stories" ON "stories"."id" = "categories_stories"."story_id" WHERE "categories_stories"."category_id" = ?  [["category_id", 1]]
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-12 19:34:14 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories"
+  Rendered stories/_story.html.erb (2.9ms)
+  Rendered stories/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 491ms (Views: 481.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/comment.css?body=1" for 127.0.0.1 at 2016-01-12 19:34:15 -0800
+
+
+Started GET "/assets/comment.js?body=1" for 127.0.0.1 at 2016-01-12 19:34:15 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-12 19:34:15 -0800
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2016-01-12 19:34:15 -0800
+
+
+Started GET "/assets/stories.css?body=1" for 127.0.0.1 at 2016-01-12 19:34:15 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-01-12 19:34:15 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-01-12 19:34:15 -0800
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2016-01-12 19:34:15 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-12 19:34:15 -0800
+
+
+Started GET "/assets/stories.js?body=1" for 127.0.0.1 at 2016-01-12 19:34:15 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-01-12 19:34:15 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-12 19:39:38 -0800
+Processing by StoriesController#index as HTML
+  [1m[36mStory Load (1.0ms)[0m  [1mSELECT "stories".* FROM "stories"[0m
+  [1m[35mCategory Load (3.8ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?  [["story_id", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?[0m  [["story_id", 2]]
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?  [["story_id", 3]]
+  Rendered stories/_story.html.erb (77.3ms)
+  Rendered stories/index.html.erb within layouts/application (91.1ms)
+Completed 200 OK in 107ms (Views: 96.0ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2016-01-12 19:39:39 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-01-12 19:39:39 -0800
+
+
+Started GET "/assets/comment.css?body=1" for 127.0.0.1 at 2016-01-12 19:39:39 -0800
+
+
+Started GET "/assets/stories.css?body=1" for 127.0.0.1 at 2016-01-12 19:39:39 -0800
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2016-01-12 19:39:39 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-12 19:39:39 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-01-12 19:39:39 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-12 19:39:39 -0800
+
+
+Started GET "/assets/comment.js?body=1" for 127.0.0.1 at 2016-01-12 19:39:39 -0800
+
+
+Started GET "/assets/stories.js?body=1" for 127.0.0.1 at 2016-01-12 19:39:39 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-01-12 19:39:39 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-12 19:40:12 -0800
+Processing by StoriesController#index as HTML
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT "stories".* FROM "stories"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?  [["story_id", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?[0m  [["story_id", 2]]
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?  [["story_id", 3]]
+  Rendered stories/_story.html.erb (12.9ms)
+  Rendered stories/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/comment.css?body=1" for 127.0.0.1 at 2016-01-12 19:40:12 -0800
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2016-01-12 19:40:12 -0800
+
+
+Started GET "/assets/stories.css?body=1" for 127.0.0.1 at 2016-01-12 19:40:12 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-12 19:40:12 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-01-12 19:40:12 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-01-12 19:40:12 -0800
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2016-01-12 19:40:12 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-12 19:40:12 -0800
+
+
+Started GET "/assets/stories.js?body=1" for 127.0.0.1 at 2016-01-12 19:40:12 -0800
+
+
+Started GET "/assets/comment.js?body=1" for 127.0.0.1 at 2016-01-12 19:40:12 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-01-12 19:40:12 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-12 19:41:05 -0800
+Processing by StoriesController#index as HTML
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT "stories".* FROM "stories"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?  [["story_id", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?[0m  [["story_id", 2]]
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?  [["story_id", 3]]
+  Rendered stories/_story.html.erb (16.8ms)
+  Rendered stories/index.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 43ms (Views: 36.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-01-12 19:41:05 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-12 19:41:05 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-12 19:41:05 -0800
+
+
+Started GET "/assets/stories.css?body=1" for 127.0.0.1 at 2016-01-12 19:41:05 -0800
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2016-01-12 19:41:05 -0800
+
+
+Started GET "/assets/comment.js?body=1" for 127.0.0.1 at 2016-01-12 19:41:05 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-01-12 19:41:05 -0800
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2016-01-12 19:41:05 -0800
+
+
+Started GET "/assets/comment.css?body=1" for 127.0.0.1 at 2016-01-12 19:41:05 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-01-12 19:41:05 -0800
+
+
+Started GET "/assets/stories.js?body=1" for 127.0.0.1 at 2016-01-12 19:41:05 -0800
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2016-01-12 19:41:07 -0800
+
+ActionController::RoutingError (uninitialized constant CategoriesController):
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__663119826102099171__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/petershin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/petershin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/petershin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/petershin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/petershin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /Users/petershin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.4ms)
+  Rendered /Users/petershin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (62.4ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2016-01-12 19:41:07 -0800
+
+ActionController::RoutingError (uninitialized constant CategoriesController):
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__663119826102099171__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/petershin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/petershin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/petershin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/petershin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/petershin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /Users/petershin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/petershin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (49.6ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2016-01-12 19:43:28 -0800
+
+ActionController::RoutingError (uninitialized constant CategoriesController):
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__663119826102099171__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/petershin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/petershin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/petershin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/petershin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /Users/petershin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.5ms)
+  Rendered /Users/petershin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /Users/petershin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (56.2ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2016-01-12 19:43:51 -0800
+
+ActionController::RoutingError (uninitialized constant CategoriesController):
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.5) lib/rack/etag.rb:23:in `call'
+  rack (1.5.5) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.5) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__663119826102099171__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/petershin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/petershin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/petershin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/petershin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/petershin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /Users/petershin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/petershin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (49.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-12 19:44:19 -0800
+Processing by StoriesController#index as HTML
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT "stories".* FROM "stories"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?  [["story_id", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?[0m  [["story_id", 2]]
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?  [["story_id", 3]]
+  Rendered stories/_story.html.erb (15.8ms)
+  Rendered stories/index.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 44ms (Views: 37.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-01-12 19:44:19 -0800
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2016-01-12 19:44:19 -0800
+
+
+Started GET "/assets/comment.css?body=1" for 127.0.0.1 at 2016-01-12 19:44:19 -0800
+
+
+Started GET "/assets/stories.css?body=1" for 127.0.0.1 at 2016-01-12 19:44:19 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-12 19:44:19 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-12 19:44:19 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-01-12 19:44:19 -0800
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2016-01-12 19:44:19 -0800
+
+
+Started GET "/assets/stories.js?body=1" for 127.0.0.1 at 2016-01-12 19:44:19 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-01-12 19:44:19 -0800
+
+
+Started GET "/assets/comment.js?body=1" for 127.0.0.1 at 2016-01-12 19:44:19 -0800
+
+
+Started GET "/category/1" for 127.0.0.1 at 2016-01-12 19:44:21 -0800
+Processing by CategoryController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered category/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 9.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/category/1" for 127.0.0.1 at 2016-01-12 19:48:09 -0800
+Processing by CategoryController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT "stories".* FROM "stories" INNER JOIN "categories_stories" ON "stories"."id" = "categories_stories"."story_id" WHERE "categories_stories"."category_id" = ?[0m  [["category_id", 1]]
+  Rendered category/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2016-01-12 19:48:10 -0800
+
+
+Started GET "/assets/comment.css?body=1" for 127.0.0.1 at 2016-01-12 19:48:10 -0800
+
+
+Started GET "/assets/stories.css?body=1" for 127.0.0.1 at 2016-01-12 19:48:10 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-12 19:48:10 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-01-12 19:48:10 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-12 19:48:10 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-01-12 19:48:10 -0800
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2016-01-12 19:48:10 -0800
+
+
+Started GET "/assets/stories.js?body=1" for 127.0.0.1 at 2016-01-12 19:48:10 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-01-12 19:48:10 -0800
+
+
+Started GET "/assets/comment.js?body=1" for 127.0.0.1 at 2016-01-12 19:48:10 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-12 19:48:13 -0800
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories"
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?[0m  [["story_id", 1]]
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?  [["story_id", 2]]
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?[0m  [["story_id", 3]]
+  Rendered stories/_story.html.erb (5.5ms)
+  Rendered stories/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-12 19:52:16 -0800
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.6ms)[0m  SELECT "stories".* FROM "stories"
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?[0m  [["story_id", 1]]
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?  [["story_id", 2]]
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?[0m  [["story_id", 3]]
+  Rendered stories/_story.html.erb (11.5ms)
+  Rendered stories/index.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 44ms (Views: 37.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/comment.css?body=1" for 127.0.0.1 at 2016-01-12 19:52:16 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-12 19:52:16 -0800
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2016-01-12 19:52:16 -0800
+
+
+Started GET "/assets/stories.css?body=1" for 127.0.0.1 at 2016-01-12 19:52:16 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-12 19:52:16 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-01-12 19:52:16 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-01-12 19:52:16 -0800
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2016-01-12 19:52:16 -0800
+
+
+Started GET "/assets/stories.js?body=1" for 127.0.0.1 at 2016-01-12 19:52:16 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-01-12 19:52:16 -0800
+
+
+Started GET "/assets/comment.js?body=1" for 127.0.0.1 at 2016-01-12 19:52:16 -0800
+
+
+Started GET "/stories/1" for 127.0.0.1 at 2016-01-12 19:52:18 -0800
+Processing by StoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered stories/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stories/1" for 127.0.0.1 at 2016-01-12 19:54:05 -0800
+Processing by StoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered stories/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 52ms (Views: 11.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2016-01-12 19:54:05 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-01-12 19:54:05 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-12 19:54:05 -0800
+
+
+Started GET "/assets/stories.css?body=1" for 127.0.0.1 at 2016-01-12 19:54:05 -0800
+
+
+Started GET "/assets/comment.css?body=1" for 127.0.0.1 at 2016-01-12 19:54:05 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-12 19:54:05 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-01-12 19:54:05 -0800
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2016-01-12 19:54:05 -0800
+
+
+Started GET "/assets/comment.js?body=1" for 127.0.0.1 at 2016-01-12 19:54:05 -0800
+
+
+Started GET "/assets/stories.js?body=1" for 127.0.0.1 at 2016-01-12 19:54:05 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-01-12 19:54:05 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-12 19:54:09 -0800
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?[0m  [["story_id", 1]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?  [["story_id", 2]]
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?[0m  [["story_id", 3]]
+  Rendered stories/_story.html.erb (18.0ms)
+  Rendered stories/index.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/category/1" for 127.0.0.1 at 2016-01-12 19:54:12 -0800
+Processing by CategoryController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT "stories".* FROM "stories" INNER JOIN "categories_stories" ON "stories"."id" = "categories_stories"."story_id" WHERE "categories_stories"."category_id" = ?[0m  [["category_id", 1]]
+  Rendered category/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/category/4" for 127.0.0.1 at 2016-01-12 19:54:14 -0800
+Processing by CategoryController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mStory Load (0.6ms)[0m  [1mSELECT "stories".* FROM "stories" INNER JOIN "categories_stories" ON "stories"."id" = "categories_stories"."story_id" WHERE "categories_stories"."category_id" = ?[0m  [["category_id", 4]]
+  Rendered category/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/category/3" for 127.0.0.1 at 2016-01-12 19:54:17 -0800
+Processing by CategoryController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mStory Load (0.1ms)[0m  [1mSELECT "stories".* FROM "stories" INNER JOIN "categories_stories" ON "stories"."id" = "categories_stories"."story_id" WHERE "categories_stories"."category_id" = ?[0m  [["category_id", 3]]
+  Rendered category/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/category/1" for 127.0.0.1 at 2016-01-12 19:54:20 -0800
+Processing by CategoryController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT "stories".* FROM "stories" INNER JOIN "categories_stories" ON "stories"."id" = "categories_stories"."story_id" WHERE "categories_stories"."category_id" = ?[0m  [["category_id", 1]]
+  Rendered category/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stories/3" for 127.0.0.1 at 2016-01-12 19:54:22 -0800
+Processing by StoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mStory Load (0.3ms)[0m  SELECT "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered stories/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 0.3ms)
