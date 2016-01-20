@@ -6,6 +6,7 @@ class Movie < ActiveRecord::Base
 
   belongs_to :genre
   has_and_belongs_to_many :actors
+  has_and_belongs_to_many :users
 
   def self.search_for(query)                                                       
     where('title LIKE :query OR description LIKE :query OR year_released LIKE :query', :query => "%#{query}%") 

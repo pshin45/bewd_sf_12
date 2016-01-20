@@ -2341,3 +2341,76 @@ Started GET "/assets/stories.js?body=1" for 127.0.0.1 at 2016-01-14 19:58:32 -08
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-01-14 19:58:32 -0800
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-01-14 20:18:19 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (37.4ms)
+Completed 200 OK in 147ms (Views: 106.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-01-14 20:18:20 -0800
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2016-01-14 20:18:20 -0800
+
+
+Started GET "/assets/stories.css?body=1" for 127.0.0.1 at 2016-01-14 20:18:20 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-14 20:18:20 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-14 20:18:20 -0800
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2016-01-14 20:18:20 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-01-14 20:18:20 -0800
+
+
+Started GET "/assets/stories.js?body=1" for 127.0.0.1 at 2016-01-14 20:18:20 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-01-14 20:18:20 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-14 20:18:22 -0800
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.6ms)[0m  SELECT "stories".* FROM "stories"
+  [1m[36mCategory Load (4.6ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?[0m  [["story_id", 1]]
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?  [["story_id", 2]]
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" INNER JOIN "categories_stories" ON "categories"."id" = "categories_stories"."category_id" WHERE "categories_stories"."story_id" = ?[0m  [["story_id", 3]]
+  Rendered stories/_story.html.erb (55.0ms)
+  Rendered stories/index.html.erb within layouts/application (86.9ms)
+Completed 200 OK in 109ms (Views: 90.0ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-01-14 20:18:23 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-01-14 20:18:23 -0800
+
+
+Started GET "/assets/category.css?body=1" for 127.0.0.1 at 2016-01-14 20:18:23 -0800
+
+
+Started GET "/assets/stories.css?body=1" for 127.0.0.1 at 2016-01-14 20:18:23 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-01-14 20:18:23 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-01-14 20:18:23 -0800
+
+
+Started GET "/assets/category.js?body=1" for 127.0.0.1 at 2016-01-14 20:18:23 -0800
+
+
+Started GET "/assets/stories.js?body=1" for 127.0.0.1 at 2016-01-14 20:18:23 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-01-14 20:18:23 -0800
