@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 Rails.application.routes.draw do
+=======
+TwilioApp::Application.routes.draw do
+>>>>>>> 878be3fff2551f9a3538597651ef64f3762b7eee
   root 'contact#index'
 
   post 'contact/:id/send_text' => 'contact#send_text', as: :send_text
@@ -43,7 +47,11 @@ Rails.application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 878be3fff2551f9a3538597651ef64f3762b7eee
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

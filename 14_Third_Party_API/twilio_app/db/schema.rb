@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160120032046) do
 
   create_table "contacts", force: :cascade do |t|
@@ -18,6 +19,15 @@ ActiveRecord::Schema.define(version: 20160120032046) do
     t.string   "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+=======
+ActiveRecord::Schema.define(version: 20160120032049) do
+
+  create_table "contacts", force: true do |t|
+    t.string   "name"
+    t.string   "phone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+>>>>>>> 878be3fff2551f9a3538597651ef64f3762b7eee
   end
 
 end

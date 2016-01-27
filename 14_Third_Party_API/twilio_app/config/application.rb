@@ -4,7 +4,11 @@ require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
+<<<<<<< HEAD
 Bundler.require(*Rails.groups)
+=======
+Bundler.require(:default, Rails.env)
+>>>>>>> 878be3fff2551f9a3538597651ef64f3762b7eee
 
 module TwilioApp
   class Application < Rails::Application
@@ -19,8 +23,11 @@ module TwilioApp
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+<<<<<<< HEAD
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+=======
+>>>>>>> 878be3fff2551f9a3538597651ef64f3762b7eee
   end
 end

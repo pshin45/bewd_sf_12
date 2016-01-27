@@ -1,0 +1,4 @@
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+SQLite3::SQLException: no such table: users: SELECT "users".* FROM "users"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+SQLite3::SQLException: no such table: users: SELECT "users".* FROM "users"

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 Rails.application.configure do
+=======
+TwilioApp::Application.configure do
+>>>>>>> 878be3fff2551f9a3538597651ef64f3762b7eee
   # Settings specified here will take precedence over those in config/application.rb.
 
   # The test environment is used exclusively to run your application's
@@ -12,9 +16,15 @@ Rails.application.configure do
   # preloads Rails for running tests, you may have to set it to true.
   config.eager_load = false
 
+<<<<<<< HEAD
   # Configure static file server for tests with Cache-Control for performance.
   config.serve_static_files   = true
   config.static_cache_control = 'public, max-age=3600'
+=======
+  # Configure static asset server for tests with Cache-Control for performance.
+  config.serve_static_assets  = true
+  config.static_cache_control = "public, max-age=3600"
+>>>>>>> 878be3fff2551f9a3538597651ef64f3762b7eee
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
@@ -31,6 +41,7 @@ Rails.application.configure do
   # ActionMailer::Base.deliveries array.
   config.action_mailer.delivery_method = :test
 
+<<<<<<< HEAD
   # Randomize the order test cases are executed.
   config.active_support.test_order = :random
 
@@ -39,4 +50,8 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+=======
+  # Print deprecation notices to the stderr.
+  config.active_support.deprecation = :stderr
+>>>>>>> 878be3fff2551f9a3538597651ef64f3762b7eee
 end

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 Rails.application.configure do
+=======
+TwilioApp::Application.configure do
+>>>>>>> 878be3fff2551f9a3538597651ef64f3762b7eee
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -19,13 +23,18 @@ Rails.application.configure do
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
+<<<<<<< HEAD
   # Raise an error on page load if there are pending migrations.
+=======
+  # Raise an error on page load if there are pending migrations
+>>>>>>> 878be3fff2551f9a3538597651ef64f3762b7eee
   config.active_record.migration_error = :page_load
 
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+<<<<<<< HEAD
 
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.
@@ -38,4 +47,6 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+=======
+>>>>>>> 878be3fff2551f9a3538597651ef64f3762b7eee
 end
